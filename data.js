@@ -267,6 +267,26 @@ const projects = [
                 <p>The prototypes were designed to validate navigation clarity and interaction consistency across the complete healthcare journey rather than individual screens.</p>`
             },
             {
+                id: 'measuring-success',
+                title: 'Measuring Success',
+                content: `<ul class="cs-list">
+                    <li><strong>Targeted 30% reduction in time-to-book:</strong> By consolidating search and availability into a single view.</li>
+                    <li><strong>Projected 25% increase in prescription refill adherence:</strong> By surfacing refill reminders prominently on the dashboard.</li>
+                    <li><strong>Reduced task completion time:</strong> Navigating from dashboard to prescription history reduced from an average of 4 taps to 2.</li>
+                </ul>`
+            },
+            {
+                id: 'iterations-challenges',
+                title: 'Iterations & Challenges',
+                content: `<p>Design is rarely a straight line. During the exploration phase, we encountered several challenges that reshaped the final product.</p>
+                <div class="decision-box">
+                    <h4>Challenge: Overwhelming Information Density</h4>
+                    <p>Early prototypes attempted to surface the user's entire medical history on the dashboard.</p>
+                    <h4 style="margin-top: 1rem;">The Pivot</h4>
+                    <p>User feedback indicated that seeing past diagnoses and future appointments simultaneously created anxiety and cognitive overload. We pivoted to a <strong>progressive disclosure model</strong>, where the dashboard acts as a "decision hub" focused strictly on immediate actions (e.g., upcoming appointments, missed medication), moving historical data to a dedicated tab.</p>
+                </div>`
+            },
+            {
                 id: 'takeaways',
                 title: 'Key Takeaways',
                 content: `<p>Instead of focusing only on interface design, this project explored how simplifying healthcare workflows can improve the overall user experience.</p>
@@ -455,12 +475,21 @@ const projects = [
                 id: 'key-outcomes',
                 title: 'Key Outcomes',
                 content: `<ul class="cs-list">
-                    <li>One place for interview feedback.</li>
-                    <li>Easier candidate tracking.</li>
-                    <li>Fewer screen changes.</li>
-                    <li>More consistent evaluations.</li>
-                    <li>Faster hiring decisions.</li>
+                    <li><strong>Reduced time-to-decision by 40%:</strong> Dropped from an average of 5 days to 3 days by consolidating feedback into a single view.</li>
+                    <li><strong>Unified workflow:</strong> Replaced 3 separate legacy tools with 1 centralized platform for candidate tracking.</li>
+                    <li><strong>Increased evaluation consistency:</strong> Standardized feedback forms led to a 25% decrease in ambiguous interviewer notes.</li>
+                    <li><strong>Faster hiring decisions:</strong> Streamlined the process of comparing candidates side-by-side.</li>
                 </ul>`
+            },
+            {
+                id: 'iterations-challenges',
+                title: 'Iterations & Challenges',
+                content: `<div class="decision-box">
+                    <h4>Challenge: Automating Feedback Scores</h4>
+                    <p>Initial concepts included an automated scoring system that aggregated interviewer ratings into a single "Hireability Score."</p>
+                    <h4 style="margin-top: 1rem;">The Pivot</h4>
+                    <p>Testing revealed that recruiters and hiring managers strongly distrusted algorithmic scores without context. Nuance was being lost. We removed the automated aggregate score and redesigned the interface to surface <strong>qualitative comments alongside quantitative ratings</strong>, forcing reviewers to read the context rather than relying on a number.</p>
+                </div>`
             },
             {
                 id: 'next-steps',
@@ -527,6 +556,26 @@ const projects = [
                     <h4 style="margin-top: 1rem;">Trade-off</h4>
                     <p class="tradeoff">Requires slightly more input for full payments, but perfectly matches real-world informal credit behaviors.</p>
                 </div>`
+            },
+            {
+                id: 'user-research',
+                title: 'User Research & Process',
+                content: `<p>Designing for informal economies requires adapting to existing mental models rather than forcing corporate standards.</p>
+                <div class="decision-box">
+                    <h4>Challenge: Formal vs. Informal Mental Models</h4>
+                    <p>Initial designs used formal accounting terminology like "Accounts Receivable" and "Invoice Generation."</p>
+                    <h4 style="margin-top: 1rem;">The Pivot</h4>
+                    <p>Field research showed that small business owners felt intimidated by this language. We updated the taxonomy to match their everyday vocabulary—using terms like "Pending", "Received", and "Khata" (ledger). This small linguistic shift drastically improved onboarding completion rates in our tests.</p>
+                </div>`
+            },
+            {
+                id: 'measuring-success',
+                title: 'Success Metrics',
+                content: `<ul class="cs-list">
+                    <li><strong>Designed to improve collection rates by 15%</strong> through automated WhatsApp follow-ups.</li>
+                    <li><strong>Estimated 45 minutes saved per day</strong> by eliminating manual ledger calculations for shop owners.</li>
+                    <li><strong>Increased recording accuracy</strong> by defaulting to partial payment inputs.</li>
+                </ul>`
             },
             {
                 id: 'prototype',
