@@ -110,19 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (projectList && typeof projects !== 'undefined') {
             projectList.innerHTML = projects.map(p => `
                 <a href="/work/${p.id}" class="project-card reveal" style="--delay: 0.2s" data-link>
-                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem;">
-                        <p class="project-platform" style="margin-bottom: 0;">${p.platform}</p>
-                        ${p.timeline ? `<span style="color: var(--text-secondary); font-size: 0.85rem;">&bull;</span> <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-weight: 600;">${p.timeline}</span>` : ''}
-                    </div>
+                    <p class="project-platform">${p.platform}</p>
                     <h3 class="project-title">${p.title}</h3>
                     <p class="project-desc">${p.shortDescription}</p>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 2.5rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
-                        <div>
-                            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Role</span>
-                            <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">${p.role}</span>
-                        </div>
-                        <span class="project-link-text" style="margin-top: 0;">View Case Study &rarr;</span>
-                    </div>
+                    <span class="project-link-text">View Case Study &rarr;</span>
                 </a>
             `).join('');
         }
