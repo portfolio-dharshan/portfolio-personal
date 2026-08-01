@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharshan S — Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css?v=11">
+</head>
+<body>
+    <div class="noise"></div>
+    
+    <header class="header reveal" style="--delay: 0.1s">
+        <div class="nav-left">
+            <span class="nav-name">Dharshan S</span>
+        </div>
+        <div class="nav-right">
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="toggle-indicator"></span>
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="home-view">
+        <section id="about" class="container">
+            <h1 class="name reveal" style="--delay: 0.2s">Dharshan S</h1>
+            <p class="role reveal" style="--delay: 0.3s">— Product Designer</p>
+
+            <div class="content">
+                <p class="intro reveal" style="--delay: 0.4s">
+                    I simplify complex workflows so people can understand information faster, make confident decisions, and complete tasks with less effort.
+                </p>
+                
+                <ul class="results">
+                    <li class="reveal" style="--delay: 0.5s">Make information easier to understand.</li>
+                    <li class="reveal" style="--delay: 0.6s">Remove unnecessary complexity.</li>
+                    <li class="reveal" style="--delay: 0.7s">Design predictable user experiences.</li>
+                    <li class="reveal" style="--delay: 0.8s">Solve real problems through thoughtful product design.</li>
+                </ul>
+            </div>
+
+            <div class="resume-wrapper reveal" style="--delay: 1.0s">
+                <a href="#" class="btn btn-primary">Resume</a>
+            </div>
+        </section>
+
+        <section id="work" class="container">
+            <h2 class="section-title reveal" style="--delay: 0.1s">SELECTED WORK</h2>
+            <div id="project-list" class="project-list"></div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title reveal" style="--delay: 0.1s">CONTACT</h2>
+            
+            <div class="contact-links-grid reveal" style="--delay: 0.2s">
+                <a href="mailto:dharshan.careers@gmail.com" class="btn btn-secondary">Email &rarr;</a>
+                <a href="https://www.linkedin.com/in/dharshanuiux/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn &rarr;</a>
+                <a href="#" class="btn btn-secondary">Resume &rarr;</a>
+            </div>
+        </section>
+        </div>
+        
+        <div id="case-study-view" style="display: none;"></div>
+        
+        <button id="back-to-top" class="back-to-top hidden" aria-label="Back to top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+        </button>
+    </main>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded View">
+    </div>
+    <script src="/data.js?v=11"></script>
+    <script src="/script.js?v=11"></script>
+</body>
+</html>
