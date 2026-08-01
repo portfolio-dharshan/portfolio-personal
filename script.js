@@ -110,10 +110,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (projectList && typeof projects !== 'undefined') {
             projectList.innerHTML = projects.map(p => `
                 <a href="/work/${p.id}" class="project-card reveal" style="--delay: 0.2s" data-link>
-                    <p class="project-platform">${p.platform}</p>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem;">
+                        <p class="project-platform" style="margin-bottom: 0;">${p.platform}</p>
+                        ${p.timeline ? `<span style="color: var(--text-secondary); font-size: 0.85rem;">&bull;</span> <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-weight: 600;">${p.timeline}</span>` : ''}
+                    </div>
                     <h3 class="project-title">${p.title}</h3>
                     <p class="project-desc">${p.shortDescription}</p>
-                    <span class="project-link-text">View Case Study &rarr;</span>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 2.5rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                        <div>
+                            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); display: block; margin-bottom: 0.25rem;">Role</span>
+                            <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">${p.role}</span>
+                        </div>
+                        <span class="project-link-text" style="margin-top: 0;">View Case Study &rarr;</span>
+                    </div>
                 </a>
             `).join('');
         }
@@ -236,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <header class="cs-header reveal" style="--delay: 0.2s">
                         ${project.heroImage ? `<div class="cs-image-breakout"><img src="${project.heroImage}" alt="${project.title} Hero" class="cs-hero-img"></div>` : ''}
                         
-                        <h1 class="cs-title" style="margin-top: 0.5rem; font-size: 3rem; letter-spacing: -0.03em;">${project.title}</h1>
-                        <p class="cs-subtitle" style="font-size: 1.2rem; line-height: 1.5; color: var(--text-secondary); margin-top: 1rem;">${project.subtitle}</p>
+                        <h1 class="cs-title">${project.title}</h1>
+                        <p class="cs-subtitle">${project.subtitle}</p>
                         
                         <div style="margin-top: 2rem;">
                             <a href="#section-prototype" class="pill-btn">

@@ -414,7 +414,7 @@ body {
 
 .cs-section h3, .cs-screen h3 {
     font-family: 'Bodoni Moda', serif;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 500;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
@@ -422,10 +422,10 @@ body {
 
 .cs-section p, .cs-screen p {
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
-    max-width: 65ch;
+    max-width: 60ch;
 }
 
 .cs-list {
@@ -618,8 +618,8 @@ body {
     font-size: 1.125rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
-    line-height: 1.6;
-    max-width: 65ch;
+    line-height: 1.7;
+    max-width: 60ch;
 }
 
 .project-link-text {
@@ -671,9 +671,20 @@ body {
     order: 2;
 }
 
+@media (max-width: 1024px) {
+    .cs-layout {
+        gap: 4rem;
+    }
+}
+
 @media (max-width: 900px) {
     .cs-layout {
         grid-template-columns: 1fr;
+    }
+    .cs-sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
     }
 }
 
