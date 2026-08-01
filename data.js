@@ -12,6 +12,15 @@ const projects = [
         readingTime: '5 min read',
         sections: [
             {
+                id: 'executive-summary',
+                title: 'Executive Summary',
+                content: `<div style="background: var(--btn-hover); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--text-primary); margin-bottom: 2rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>The Problem:</strong> Patients struggled with fragmented healthcare systems (booking, history, prescriptions).</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>The Solution:</strong> A unified, progressive disclosure dashboard that consolidates all core tasks.</p>
+                    <p style="margin-bottom: 0;"><strong>The Impact:</strong> Designed to reduce time-to-book by 30% and improve prescription adherence by 25%.</p>
+                </div>`
+            },
+            {
                 id: 'overview',
                 title: 'Overview',
                 content: `<p>Healthcare services often require patients to switch between different interfaces for booking appointments, reviewing previous visits, and managing prescriptions. This fragmented experience increases navigation effort and makes important information harder to access when users need it most.</p>
@@ -342,6 +351,15 @@ const projects = [
         readingTime: '2 min read',
         sections: [
             {
+                id: 'executive-summary',
+                title: 'Executive Summary',
+                content: `<div style="background: var(--btn-hover); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--text-primary); margin-bottom: 2rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>The Problem:</strong> Feedback was scattered across 3 legacy tools, causing delayed hiring decisions.</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>The Solution:</strong> A single, unified platform emphasizing qualitative feedback alongside quantitative scores.</p>
+                    <p style="margin-bottom: 0;"><strong>The Impact:</strong> Consolidated workflows and reduced time-to-decision by an average of 40%.</p>
+                </div>`
+            },
+            {
                 id: 'overview',
                 title: 'Overview',
                 content: `<p>Hiring teams often use different tools to review candidates. This makes feedback harder to track and hiring decisions slower.</p>
@@ -524,6 +542,15 @@ const projects = [
         status: 'Completed',
         readingTime: '3 min read',
         sections: [
+            {
+                id: 'executive-summary',
+                title: 'Executive Summary',
+                content: `<div style="background: var(--btn-hover); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--text-primary); margin-bottom: 2rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>The Problem:</strong> Small business owners found formal accounting tools intimidating and time-consuming.</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>The Solution:</strong> A streamlined ledger app using informal taxonomy ("Khata") and WhatsApp integration.</p>
+                    <p style="margin-bottom: 0;"><strong>The Impact:</strong> Designed to save 45 mins/day and improve informal debt collection rates by 15%.</p>
+                </div>`
+            },
             {
                 id: 'dashboard',
                 group: 'Application Flow',
