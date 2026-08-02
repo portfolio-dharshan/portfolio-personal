@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="margin-top: 2rem;">
                             <a href="#section-prototype" class="pill-btn">
                                 <span class="pill-dot" style="display:inline-block; width:8px; height:8px; background:var(--text-primary); border-radius:50%; transition: background-color 0.3s ease;"></span>
-                                Skip to final prototype &darr;
+                                View Interactive Prototype &rarr;
                             </a>
                         </div>
                     </header>
