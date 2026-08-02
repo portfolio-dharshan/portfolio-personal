@@ -159,60 +159,30 @@ const projects = [
         readingTime: '2 min read',
         sections: [
             {
-                id: 'executive-summary',
-                title: 'Executive Summary',
-                content: `<div style="background: var(--btn-hover); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--text-primary); margin-bottom: 2rem;">
-                    <p style="margin-bottom: 0.5rem;"><strong>The Problem:</strong> Feedback was scattered across 3 legacy tools, causing delayed hiring decisions.</p>
-                    <p style="margin-bottom: 0.5rem;"><strong>The Solution:</strong> A single, unified platform emphasizing qualitative feedback alongside quantitative scores.</p>
-                    <p style="margin-bottom: 0;"><strong>The Impact:</strong> Consolidated workflows and reduced time-to-decision by an average of 40%.</p>
-                </div>`
-            },
-            {
                 id: 'overview',
                 title: 'Overview',
-                content: `<p>Hiring teams often use different tools to review candidates. This makes feedback harder to track and hiring decisions slower.</p>
-                <p>Internal Interview Feedback brings everything into one platform, making it easier to review candidates, compare feedback, and make hiring decisions.</p>`
-            },
-            {
-                id: 'problem',
-                title: 'Problem',
-                content: `<p>Hiring teams often face:</p>
-                <ul class="cs-list">
-                    <li>Feedback in different places.</li>
-                    <li>Different interview styles.</li>
-                    <li>Hard-to-track candidate progress.</li>
-                    <li>Slow hiring decisions.</li>
-                    <li>Limited hiring visibility.</li>
-                </ul>`
-            },
-            {
-                id: 'goal',
-                title: 'Goal',
-                content: `<p>Design a platform that helps hiring teams:</p>
-                <ul class="cs-list">
-                    <li>Track candidate progress.</li>
-                    <li>Record interview feedback.</li>
-                    <li>Compare candidates.</li>
-                    <li>Make hiring decisions.</li>
-                    <li>Reduce manual work.</li>
-                </ul>`
+                content: `<p>Recruitment teams often switch between different tools to review candidates, track interview progress, and record feedback. This slows decision-making and makes it harder to keep evaluations organized.</p>
+                <p>Internal Interview Feedback brings these tasks into one connected workflow, helping recruitment teams review candidates, compare feedback, and make hiring decisions from one place.</p>`
             },
             {
                 id: 'design-principles',
                 title: 'Design Principles',
                 content: `<ul class="cs-list">
+                    <li>Show important information first.</li>
                     <li>Keep information easy to scan.</li>
-                    <li>Show important details first.</li>
-                    <li>Reduce extra clicks.</li>
-                    <li>Keep every screen consistent.</li>
-                    <li>Make decisions easier.</li>
+                    <li>Reduce unnecessary navigation.</li>
+                    <li>Maintain consistent workflows.</li>
+                    <li>Support clear decision-making.</li>
                 </ul>`
             },
             {
                 id: 'user-journey',
                 title: 'User Journey',
-                content: `<div class="user-flow-diagram" style="padding: 2rem; background: var(--btn-hover); border-radius: 8px; border: 1px solid var(--border-color); text-align: center; margin-top: 1rem;">
-                    <p style="font-size: 1.1rem; font-weight: 500; letter-spacing: 0.02em;">Candidate Overview &rarr; Interview Progress &rarr; Interview Feedback &rarr; Final Hiring Decision</p>
+                content: `<div class="user-flow-diagram" style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.1rem; font-weight: 500;">Review Candidates &rarr; Track Interviews &rarr; Record Feedback &rarr; Make Hiring Decisions</p>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <p>Each step follows the recruitment process, helping hiring teams move from candidate review to final decision without switching between multiple tools.</p>
                 </div>`
             },
             {
@@ -221,15 +191,12 @@ const projects = [
                 title: 'Candidate Overview',
                 layout: 'stacked',
                 image: '/candidate_overview.png',
-                content: `
-                <div class="decision-box">
-                    <h4>Goal</h4>
-                    <p>Help recruiters quickly understand every candidate.</p>
-                    <h4 style="margin-top: 1rem;">Design Decision</h4>
-                    <p>Show each candidate as a card.</p>
-                    <h4 style="margin-top: 1rem;">Why</h4>
-                    <p>Cards make candidates easier to compare.</p>
-                </div>`
+                content: `<h4>Goal</h4>
+                <p>Help recruiters quickly understand each candidate.</p>
+                <h4>Design Decision</h4>
+                <p>Present candidate information as structured cards.</p>
+                <h4>Why</h4>
+                <p>Recruiters can review and compare candidates more efficiently.</p>`
             },
             {
                 id: 'interview-progress',
@@ -237,29 +204,23 @@ const projects = [
                 title: 'Interview Progress',
                 layout: 'stacked',
                 image: '/interview_progress.png',
-                content: `
-                <div class="decision-box">
-                    <h4>Goal</h4>
-                    <p>Show every interview in one place.</p>
-                    <h4 style="margin-top: 1rem;">Design Decision</h4>
-                    <p>Display interview rounds in order.</p>
-                    <h4 style="margin-top: 1rem;">Why</h4>
-                    <p>Reviewers can understand the full journey before deciding.</p>
-                </div>`
+                content: `<h4>Goal</h4>
+                <p>Provide a clear view of every interview stage.</p>
+                <h4>Design Decision</h4>
+                <p>Display interview rounds in chronological order.</p>
+                <h4>Why</h4>
+                <p>Reviewers can understand the candidate's progress before moving to the next step.</p>`
             },
             {
                 id: 'interview-feedback',
                 group: 'Platform Design',
                 title: 'Interview Feedback',
-                content: `
-                <div class="decision-box">
-                    <h4>Goal</h4>
-                    <p>Keep interview feedback clear and consistent.</p>
-                    <h4 style="margin-top: 1rem;">Design Decision</h4>
-                    <p>Show ratings and comments together.</p>
-                    <h4 style="margin-top: 1rem;">Why</h4>
-                    <p>Reviewers can understand performance without switching screens.</p>
-                </div>`
+                content: `<h4>Goal</h4>
+                <p>Keep interview evaluations organized and consistent.</p>
+                <h4>Design Decision</h4>
+                <p>Keep ratings and written feedback together.</p>
+                <h4>Why</h4>
+                <p>Reviewers can understand performance without searching across different sections.</p>`
             },
             {
                 id: 'final-decision',
@@ -267,74 +228,48 @@ const projects = [
                 title: 'Final Hiring Decision',
                 layout: 'stacked',
                 image: '/final_decision.png',
-                content: `
-                <div class="decision-box">
-                    <h4>Goal</h4>
-                    <p>Support confident hiring decisions.</p>
-                    <h4 style="margin-top: 1rem;">Design Decision</h4>
-                    <p>Keep all interview details visible while choosing Hire, Hold, or Reject.</p>
-                    <h4 style="margin-top: 1rem;">Why</h4>
-                    <p>Reviewers can decide without losing context.</p>
-                </div>`
+                content: `<h4>Goal</h4>
+                <p>Support informed hiring decisions.</p>
+                <h4>Design Decision</h4>
+                <p>Keep candidate details and interview feedback together during the final review.</p>
+                <h4>Why</h4>
+                <p>Recruiters can make decisions with all relevant information in one place.</p>`
             },
             {
                 id: 'responsive-design',
                 title: 'Responsive Design',
-                content: `<p>The platform keeps the same workflow across different screen sizes while making information easy to read.</p>`
+                content: `<p>The platform adapts across screen sizes while keeping the same workflow and information structure. Larger layouts improve readability without changing familiar interactions.</p>`
             },
             {
                 id: 'prototype',
                 title: 'Interactive Prototype',
-                content: `
-                <p>Explore the complete workflow:</p>
-                <ul class="cs-list" style="margin-bottom: 2rem;">
+                content: `<p>Explore the complete recruitment workflow:</p>
+                <ul class="cs-list">
                     <li>Candidate Overview</li>
                     <li>Interview Progress</li>
                     <li>Interview Feedback</li>
                     <li>Final Hiring Decision</li>
                     <li>Responsive Web Experience</li>
                 </ul>
-                <div style="display: flex; gap: 1rem; align-items: center;">
+                <div style="margin-top: 2rem;">
                     <a href="https://www.figma.com/proto/nr6vPXiIJc5cbAeuz4ZH6h/Internal-Interview-Feedback-System?node-id=51-17" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Opens Figma in a new tab">View Interactive Prototype ↗</a>
-                    <span style="font-size: 0.85rem; color: var(--text-secondary);">(Opens Figma in a new tab)</span>
                 </div>`
             },
             {
-                id: 'key-outcomes',
-                title: 'Key Outcomes',
+                id: 'takeaways',
+                title: 'Key Takeaways',
                 content: `<ul class="cs-list">
-                    <li><strong>Reduced time-to-decision by 40%:</strong> Dropped from an average of 5 days to 3 days by consolidating feedback into a single view.</li>
-                    <li><strong>Unified workflow:</strong> Replaced 3 separate legacy tools with 1 centralized platform for candidate tracking.</li>
-                    <li><strong>Increased evaluation consistency:</strong> Standardized feedback forms led to a 25% decrease in ambiguous interviewer notes.</li>
-                    <li><strong>Faster hiring decisions:</strong> Streamlined the process of comparing candidates side-by-side.</li>
-                </ul>`
-            },
-            {
-                id: 'iterations-challenges',
-                title: 'Iterations & Challenges',
-                content: `<div class="decision-box">
-                    <h4>Challenge: Automating Feedback Scores</h4>
-                    <p>Initial concepts included an automated scoring system that aggregated interviewer ratings into a single "Hireability Score."</p>
-                    <h4 style="margin-top: 1rem;">The Pivot</h4>
-                    <p>Testing revealed that recruiters and hiring managers strongly distrusted algorithmic scores without context. Nuance was being lost. We removed the automated aggregate score and redesigned the interface to surface <strong>qualitative comments alongside quantitative ratings</strong>, forcing reviewers to read the context rather than relying on a number.</p>
-                </div>`
-            },
-            {
-                id: 'next-steps',
-                title: 'Next Steps',
-                content: `<ul class="cs-list">
-                    <li>Team Reviews</li>
-                    <li>Hiring Analytics</li>
-                    <li>Interview Scheduling</li>
-                    <li>Role Permissions</li>
-                    <li>AI Feedback Summary</li>
-                    <li>Recruitment Reports</li>
+                    <li>Connected recruitment tasks into one workflow.</li>
+                    <li>Kept interview information organized.</li>
+                    <li>Reduced unnecessary navigation.</li>
+                    <li>Maintained consistency across devices.</li>
+                    <li>Improved product thinking through iteration.</li>
                 </ul>`
             },
             {
                 id: 'reflection',
                 title: 'Reflection',
-                content: `<p>This project showed how better information structure can simplify hiring. By keeping feedback, progress, and decisions together, recruiters can review candidates more easily and make decisions with greater confidence.</p>`
+                content: `<p>This project helped me understand how organizing recruitment tasks into one workflow can simplify hiring. I focused on making candidate information easier to review while keeping the experience clear, consistent, and easy to follow.</p>`
             }
         ]
     },
