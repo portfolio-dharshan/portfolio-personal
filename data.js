@@ -276,8 +276,8 @@ const projects = [
     {
         id: 'arrear',
         title: 'Arrear',
-        subtitle: '— Track credit, monitor pending payments, and recover dues.',
-        shortDescription: 'Helping small businesses track customer credit, record payments, and manage collections in one simple application.',
+        subtitle: '— Helping small businesses manage customer credit, track payments, and recover dues through one simple workflow.',
+        shortDescription: 'Helping small businesses manage customer credit, track payments, and recover dues through one simple workflow.',
         platform: 'Mobile Application',
         timeline: '8 Weeks',
         role: 'Sole Product Designer',
@@ -286,85 +286,151 @@ const projects = [
         readingTime: '3 min read',
         sections: [
             {
-                id: 'executive-summary',
-                title: 'Executive Summary',
-                content: `<div style="background: var(--btn-hover); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--text-primary); margin-bottom: 2rem;">
-                    <p style="margin-bottom: 0.5rem;"><strong>The Problem:</strong> Small business owners found formal accounting tools intimidating and time-consuming.</p>
-                    <p style="margin-bottom: 0.5rem;"><strong>The Solution:</strong> A streamlined ledger app using informal taxonomy ("Khata") and WhatsApp integration.</p>
-                    <p style="margin-bottom: 0;"><strong>The Impact:</strong> Designed to save 45 mins/day and improve informal debt collection rates by 15%.</p>
+                id: 'overview',
+                title: 'Overview',
+                content: `<p>Many small business owners still manage customer credit using notebooks, spreadsheets, or messaging apps. As records grow, tracking pending payments and follow-ups becomes more difficult.</p>
+                <p>Arrear brings customer records, payments, reminders, and reports into one mobile application, helping business owners manage collections through a clear and connected workflow.</p>`
+            },
+            {
+                id: 'design-principles',
+                title: 'Design Principles',
+                content: `<ul class="cs-list">
+                    <li>Prioritize important information.</li>
+                    <li>Keep everyday tasks simple.</li>
+                    <li>Reduce unnecessary navigation.</li>
+                    <li>Maintain consistent interactions.</li>
+                    <li>Make information easy to scan.</li>
+                </ul>`
+            },
+            {
+                id: 'user-journey',
+                title: 'User Journey',
+                content: `<div class="user-flow-diagram" style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.1rem; font-weight: 500;">Check Pending Payments &rarr; Review Customer &rarr; Record Payment &rarr; Schedule Follow-up &rarr; Track Progress</p>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <p>The workflow follows how business owners manage collections, helping them complete each step without switching between different tools.</p>
                 </div>`
             },
             {
                 id: 'dashboard',
-                group: 'Application Flow',
+                group: 'Platform Design',
                 title: 'Dashboard',
                 layout: 'stacked',
-                images: ['/arrear_dashboard.png'],
-                content: `
-                <div class="screen-metadata">
-                    <span>📱 Platform: Mobile</span>
-                    <span>🎯 Goal: Guide daily collection efforts</span>
-                </div>
-                <div class="decision-box">
-                    <h4>Decision</h4>
-                    <p>Separate overdue amounts from total pending amounts with distinct urgency highlighting.</p>
-                    <h4 style="margin-top: 1rem;">Trade-off</h4>
-                    <p class="tradeoff">Takes up premium screen real estate, but directly solves the primary user goal: knowing who needs to be contacted today.</p>
-                </div>`
+                image: '/arrear_dashboard.png',
+                content: `<h4>Goal</h4>
+                <p>Help users quickly understand what needs attention.</p>
+                <h4>Design Decision</h4>
+                <p>Show overdue payments separately from the total outstanding amount.</p>
+                <h4>Why</h4>
+                <p>Users can identify urgent collections before reviewing individual customers.</p>`
+            },
+            {
+                id: 'customer-list',
+                group: 'Platform Design',
+                title: 'Customer List',
+                layout: 'stacked',
+                content: `<h4>Goal</h4>
+                <p>Help users quickly find and review customers.</p>
+                <h4>Design Decision</h4>
+                <p>Show payment status and outstanding balance together.</p>
+                <h4>Why</h4>
+                <p>Users can compare customers before opening their records.</p>`
+            },
+            {
+                id: 'customer-details',
+                group: 'Platform Design',
+                title: 'Customer Details',
+                layout: 'stacked',
+                content: `<h4>Goal</h4>
+                <p>Bring all customer information into one place.</p>
+                <h4>Design Decision</h4>
+                <p>Keep balance, payment history, and actions together.</p>
+                <h4>Why</h4>
+                <p>Users can review information and take the next step without changing screens.</p>`
+            },
+            {
+                id: 'add-customer',
+                group: 'Platform Design',
+                title: 'Add Customer',
+                layout: 'stacked',
+                content: `<h4>Goal</h4>
+                <p>Make adding new customers quick and simple.</p>
+                <h4>Design Decision</h4>
+                <p>Collect only the information needed to begin tracking credit.</p>
+                <h4>Why</h4>
+                <p>A shorter process makes it easier to record customers immediately.</p>`
             },
             {
                 id: 'payment',
-                group: 'Application Flow',
-                title: 'Payment & Follow-up',
+                group: 'Platform Design',
+                title: 'Payment',
                 layout: 'stacked',
-                images: ['/arrear_payment.png', '/arrear_followup.png'],
-                content: `
-                <div class="screen-metadata">
-                    <span>📱 Platform: Mobile</span>
-                    <span>🎯 Goal: Record partial payments</span>
-                </div>
-                <div class="decision-box">
-                    <h4>Decision</h4>
-                    <p>Design the payment flow to default to partial installments rather than assuming full settlement.</p>
-                    <h4 style="margin-top: 1rem;">Trade-off</h4>
-                    <p class="tradeoff">Requires slightly more input for full payments, but perfectly matches real-world informal credit behaviors.</p>
-                </div>`
+                image: '/arrear_payment.png',
+                content: `<h4>Goal</h4>
+                <p>Help users keep payment records up to date.</p>
+                <h4>Design Decision</h4>
+                <p>Support both full and partial payments.</p>
+                <h4>Why</h4>
+                <p>This reflects how customers commonly repay outstanding balances.</p>`
             },
             {
-                id: 'user-research',
-                title: 'User Research & Process',
-                content: `<p>Designing for informal economies requires adapting to existing mental models rather than forcing corporate standards.</p>
-                <div class="decision-box">
-                    <h4>Challenge: Formal vs. Informal Mental Models</h4>
-                    <p>Initial designs used formal accounting terminology like "Accounts Receivable" and "Invoice Generation."</p>
-                    <h4 style="margin-top: 1rem;">The Pivot</h4>
-                    <p>Field research showed that small business owners felt intimidated by this language. We updated the taxonomy to match their everyday vocabulary—using terms like "Pending", "Received", and "Khata" (ledger). This small linguistic shift drastically improved onboarding completion rates in our tests.</p>
-                </div>`
+                id: 'follow-up',
+                group: 'Platform Design',
+                title: 'Follow-up',
+                layout: 'stacked',
+                image: '/arrear_followup.png',
+                content: `<h4>Goal</h4>
+                <p>Help users stay organized after recording a payment.</p>
+                <h4>Design Decision</h4>
+                <p>Allow reminders to be scheduled from the customer record.</p>
+                <h4>Why</h4>
+                <p>Users can plan the next follow-up without interrupting their workflow.</p>`
             },
             {
-                id: 'measuring-success',
-                title: 'Success Metrics',
-                content: `<ul class="cs-list">
-                    <li><strong>Designed to improve collection rates by 15%</strong> through automated WhatsApp follow-ups.</li>
-                    <li><strong>Estimated 45 minutes saved per day</strong> by eliminating manual ledger calculations for shop owners.</li>
-                    <li><strong>Increased recording accuracy</strong> by defaulting to partial payment inputs.</li>
-                </ul>`
+                id: 'reports',
+                group: 'Platform Design',
+                title: 'Reports',
+                layout: 'stacked',
+                content: `<h4>Goal</h4>
+                <p>Give users a clear view of collection progress.</p>
+                <h4>Design Decision</h4>
+                <p>Separate pending and recovered amounts.</p>
+                <h4>Why</h4>
+                <p>Users can quickly understand what has been collected and what still needs attention.</p>`
             },
             {
                 id: 'prototype',
                 title: 'Interactive Prototype',
-                content: `
-                <div class="prototype-metadata card" style="padding: 2rem; background: var(--btn-hover); border-radius: 12px; margin-bottom: 2rem;">
-                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
-                        <div><strong>Status:</strong> Live Interactive</div>
-                        <div><strong>Updated:</strong> June 2026</div>
-                    </div>
-                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2rem;">Last updated: June 2026 &bull; Mobile Application</div>
-                </div>
-                <div style="display: flex; gap: 1rem; align-items: center;">
-                    <a href="https://www.figma.com/proto/rXmRi6ewsbM5IDr9Tq30jd/Credit-Recovery---2?node-id=1-4" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Opens Figma in a new tab">View Prototype ↗</a>
-                    <span style="font-size: 0.85rem; color: var(--text-secondary);">(Opens Figma in a new tab)</span>
+                content: `<p>Explore the complete credit management workflow:</p>
+                <ul class="cs-list">
+                    <li>Dashboard</li>
+                    <li>Customer List</li>
+                    <li>Customer Details</li>
+                    <li>Add Customer</li>
+                    <li>Payment</li>
+                    <li>Follow-up</li>
+                    <li>Reports</li>
+                </ul>
+                <div style="margin-top: 2rem;">
+                    <a href="https://www.figma.com/proto/rXmRi6ewsbM5IDr9Tq30jd/Credit-Recovery---2?node-id=1-4" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Opens Figma in a new tab">View Interactive Prototype ↗</a>
                 </div>`
+            },
+            {
+                id: 'takeaways',
+                title: 'Key Takeaways',
+                content: `<ul class="cs-list">
+                    <li>Connected credit management into one workflow.</li>
+                    <li>Simplified everyday collection tasks.</li>
+                    <li>Kept important information easy to find.</li>
+                    <li>Maintained a consistent experience across the application.</li>
+                    <li>Strengthened product thinking through iteration.</li>
+                </ul>`
+            },
+            {
+                id: 'reflection',
+                title: 'Reflection',
+                content: `<p>This project helped me explore how simplifying everyday credit management can make collections easier for small businesses. I focused on creating a workflow that keeps customer information, payments, and follow-ups connected while making each step easy to understand and complete.</p>`
             }
         ]
     }
