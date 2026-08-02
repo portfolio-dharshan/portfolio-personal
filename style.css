@@ -633,16 +633,6 @@ body {
     .nav-name {
         display: none;
     }
-    
-    .nav-right {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .header-controls {
-        width: 100%;
-        justify-content: space-between;
-    }
 
     .mobile-menu-btn {
         display: flex;
