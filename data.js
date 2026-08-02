@@ -330,6 +330,7 @@ const projects = [
                 group: 'Platform Design',
                 title: 'Customer List',
                 layout: 'stacked',
+                image: '/arrear_customers.png',
                 content: `<h4>Goal</h4>
                 <p>Help users quickly find and review customers.</p>
                 <h4>Design Decision</h4>
@@ -342,6 +343,7 @@ const projects = [
                 group: 'Platform Design',
                 title: 'Customer Details',
                 layout: 'stacked',
+                image: '/arrear_details.png',
                 content: `<h4>Goal</h4>
                 <p>Bring all customer information into one place.</p>
                 <h4>Design Decision</h4>
@@ -354,6 +356,7 @@ const projects = [
                 group: 'Platform Design',
                 title: 'Add Customer',
                 layout: 'stacked',
+                image: '/arrear_add.png',
                 content: `<h4>Goal</h4>
                 <p>Make adding new customers quick and simple.</p>
                 <h4>Design Decision</h4>
@@ -392,6 +395,7 @@ const projects = [
                 group: 'Platform Design',
                 title: 'Reports',
                 layout: 'stacked',
+                image: '/arrear_reports.png',
                 content: `<h4>Goal</h4>
                 <p>Give users a clear view of collection progress.</p>
                 <h4>Design Decision</h4>
