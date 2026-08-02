@@ -6,6 +6,20 @@
     --accent: #ffffff;
     --border-color: rgba(255, 255, 255, 0.1);
     --btn-hover: rgba(255, 255, 255, 0.05);
+
+    /* Fluid Spacing Scale */
+    --space-xs: clamp(0.5rem, 1vw, 1rem);
+    --space-sm: clamp(1rem, 2vw, 1.5rem);
+    --space-md: clamp(1.5rem, 3vw, 2.5rem);
+    --space-lg: clamp(3rem, 6vw, 5rem);
+    --space-xl: clamp(5rem, 10vw, 8rem);
+    
+    /* Fluid Typography Scale */
+    --text-body: clamp(1rem, 1.5vw, 1.125rem);
+    --text-h1: clamp(3rem, 8vw, 7rem);
+    --text-h2: clamp(2rem, 5vw, 4rem);
+    --text-h3: clamp(1.5rem, 4vw, 2.5rem);
+    --text-subtitle: clamp(1rem, 2vw, 1.25rem);
 }
 
 [data-theme="light"] {
@@ -93,7 +107,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 5vw;
+    padding: var(--space-sm) var(--space-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -186,6 +200,8 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.02em;
+    padding: 0.5rem; /* Better touch target */
+    margin: -0.5rem; /* Maintain visual alignment */
     transition: color 0.4s ease;
 }
 
@@ -225,7 +241,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10rem 5vw 5rem;
+    padding: clamp(6rem, 15vh, 10rem) var(--space-md) var(--space-xl);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,18 +250,18 @@ body {
 
 .name {
     font-family: 'Bodoni Moda', serif;
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: var(--text-h1);
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.02em;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-xs);
     margin-left: -0.05em; /* Optical alignment */
 }
 
 .role {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: var(--text-subtitle);
     color: var(--text-secondary);
-    margin-bottom: 5rem;
+    margin-bottom: var(--space-lg);
     font-weight: 400;
     letter-spacing: 0.02em;
 }
@@ -255,11 +271,12 @@ body {
 }
 
 .intro {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: var(--text-h3);
     font-weight: 400;
-    line-height: 1.3;
-    margin-bottom: 2rem;
+    line-height: 1.4;
+    margin-bottom: var(--space-md);
     letter-spacing: -0.01em;
+    max-width: 65ch; /* Optimal reading width */
 }
 
 .results {
@@ -271,11 +288,12 @@ body {
 }
 
 .results li {
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-size: var(--text-body);
     color: var(--text-secondary);
     position: relative;
     padding-left: 1.5rem;
     line-height: 1.6;
+    max-width: 65ch;
 }
 
 .results li::before {
@@ -303,6 +321,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
+    min-height: 44px; /* WCAG touch target minimum */
+    min-width: 44px;
     border-radius: 100px;
     font-weight: 600;
     font-size: 0.95rem;
@@ -390,11 +410,11 @@ body {
 /* New Section Styles */
 .section-title {
     font-family: 'Bodoni Moda', serif;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: var(--text-h2);
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.02em;
-    margin-bottom: 2.5rem;
+    margin-bottom: var(--space-md);
 }
 
 .section-subtitle {
@@ -454,34 +474,35 @@ body {
 
 .cs-section h3, .cs-screen h3 {
     font-family: 'Bodoni Moda', serif;
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: var(--text-h3);
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-sm);
     color: var(--text-primary);
 }
 
 .cs-section p, .cs-screen p {
-    font-size: 1.125rem;
+    font-size: var(--text-body);
     line-height: 1.7;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    max-width: 60ch;
+    margin-bottom: var(--space-sm);
+    max-width: 65ch; /* Optimal reading width */
 }
 
 .cs-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
     max-width: 65ch;
 }
 
 .cs-list li {
-    font-size: 1.125rem;
+    font-size: var(--text-body);
     color: var(--text-secondary);
     position: relative;
     padding-left: 1.5rem;
+    line-height: 1.6;
 }
 
 .cs-list li::before {
@@ -573,11 +594,11 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
-        padding: 22vh 6vw 10vh;
+        padding: clamp(5rem, 15vh, 8rem) var(--space-md) var(--space-xl);
     }
     
     .header {
-        padding: 2.5rem 6vw 0;
+        padding: var(--space-sm) var(--space-md);
     }
     
     .nav-name {
@@ -587,20 +608,37 @@ body {
     .nav-right {
         width: 100%;
         justify-content: space-between;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .nav-links {
-        gap: 1.5rem;
+        gap: 1rem;
     }
     
     .cs-grid {
         flex-direction: column;
-        gap: 2rem;
+        gap: var(--space-md);
+    }
+    
+    .contact-links-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-links-grid .btn {
+        width: 100%; /* Full width thumb targets */
+    }
+
+    .resume-wrapper .btn {
+        width: 100%;
     }
     
     .results li {
         padding-left: 1.25rem;
+    }
+    
+    .project-card {
+        padding: var(--space-md);
     }
 }
 
@@ -681,7 +719,7 @@ body {
 .cs-layout {
     display: grid;
     grid-template-columns: 220px 1fr;
-    gap: 8rem;
+    gap: var(--space-xl);
     align-items: start;
 }
 
@@ -713,13 +751,15 @@ body {
 
 @media (max-width: 1024px) {
     .cs-layout {
-        gap: 4rem;
+        grid-template-columns: 200px 1fr;
+        gap: var(--space-lg);
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .cs-layout {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
     .cs-sidebar {
         position: relative;
@@ -731,6 +771,7 @@ body {
 @media (max-width: 768px) {
     .cs-split {
         flex-direction: column;
+        gap: var(--space-md);
     }
     .cs-split.image-left .cs-split-image,
     .cs-split.image-left .cs-split-text,
