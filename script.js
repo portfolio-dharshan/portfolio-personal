@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu Toggle ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const header = document.querySelector('.header');
+    const mainHeader = document.querySelector('.header');
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            header.classList.toggle('mobile-menu-open');
-            const isOpen = header.classList.contains('mobile-menu-open');
+            mainHeader.classList.toggle('mobile-menu-open');
+            const isOpen = mainHeader.classList.contains('mobile-menu-open');
             mobileMenuBtn.setAttribute('aria-expanded', isOpen);
             document.body.style.overflow = isOpen ? 'hidden' : ''; // Prevent background scrolling
         });
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                header.classList.remove('mobile-menu-open');
+                mainHeader.classList.remove('mobile-menu-open');
                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             });
