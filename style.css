@@ -715,17 +715,24 @@ body {
 
 /* --- SPA Enhancements --- */
 .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
     margin-top: 2rem;
 }
 
+@media (min-width: 1025px) {
+    .project-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .project-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: var(--text-primary);
-    padding: 2.5rem;
+    padding: var(--space-md);
     border: 1px solid var(--border-color);
     border-radius: 12px; /* Increased border radius for a softer, modern look */
     background: transparent;
